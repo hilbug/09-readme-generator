@@ -1,6 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+[![License: ${data.license.toUpperCase()}](https://img.shields.io/badge/License-${data.license.toUpperCase()}-brightgreen.svg)]
 
 ## Description
 ${data.description}  
