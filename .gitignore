@@ -1,6 +1,10 @@
 # DS-Stores
 .DS_Store/
 
+# Dependency directories
+node_modules/
+jspm_packages/
+
 # Logs
 logs
 *.log
@@ -39,10 +43,6 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
