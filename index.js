@@ -15,7 +15,6 @@ const questions = [
         name: 'title',
         message: 'Enter a title for your project.'
     },
-    /*
     {
         type: 'input',
         name: 'description',
@@ -56,20 +55,36 @@ const questions = [
         name: 'addlquestions',
         message: 'If applicable, enter additional instructions on how to reach you with questions.'
     },
-    */
+    
     {
         type: 'rawlist',
         name: 'license',
-        message: 'Select a license for your project. Note: it is recommended that you save a separate LICENSE file in your repo. Refer to https://choosealicense.com/ for more detail.',
+        message: 'Select a license for your project. Note: it is recommended that you save a separate LICENSE file in the root of the repository;. Refer to https://choosealicense.com/ for further details.',
         choices: [
             {
                 name: 'MIT',
                 value: 'mit'
             },
             {
+                name: 'GNU General Public License v3.0',
+                value: 'gpl-3.0'
+            },
+            {
+                name: 'ISC',
+                value: 'isc'
+            },
+            {
                 name: 'The Unlicense',
                 value: 'unlicense'
-            }
+            },
+            {
+                name: 'Do What The F*ck You Want To Public License',
+                value: 'wtfpl'
+            },
+            {
+                name: 'Creative Commons Zero v1.0 Universal',
+                value: 'cc0-1.0'
+            },
         ],
         default: [
             {
@@ -87,8 +102,6 @@ let promptUser = () => {
 }
 
 // function to write README file
-// function writeToFile(fileName, data) {
-// }
 const writeToFile = util.promisify(fs.writeFile);
 
 // function to initialize program - 9-3 ex. 40
