@@ -8,7 +8,7 @@ const inquirer = require("inquirer");
 // Generate markdown function
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// Array of questions for user - some text taken from Good-README-Guide
+// Array of questions for user - some text taken from the provided Good-README-Guide
 const questions = [
     {
         type: 'input',
@@ -59,39 +59,17 @@ const questions = [
     {
         type: 'rawlist',
         name: 'license',
-        message: 'Select a license for your project. Note: it is recommended that you save a separate LICENSE file in the root of the repository;. Refer to https://choosealicense.com/ for further details.',
+        message: 'Choose a license for your project by selecting a number. Note: it is recommended that you save a separate LICENSE file in the root of the repository. Refer to https://choosealicense.com/ for further details.',
         choices: [
-            {
-                name: 'MIT',
-                value: 'mit'
-            },
-            {
-                name: 'GNU General Public License v3.0',
-                value: 'gpl-3.0'
-            },
-            {
-                name: 'ISC',
-                value: 'isc'
-            },
-            {
-                name: 'The Unlicense',
-                value: 'unlicense'
-            },
-            {
-                name: 'Do What The F*ck You Want To Public License',
-                value: 'wtfpl'
-            },
-            {
-                name: 'Creative Commons Zero v1.0 Universal',
-                value: 'cc0-1.0'
-            },
+            'Apache license 2.0',
+            'Creative Commons Zero v1.0 Universal',
+            'Do What The F*ck You Want To Public License',
+            'GNU General Public License v3.0',
+            'ISC',
+            'MIT',
+            'The Unlicense'
         ],
-        default: [
-            {
-                name: 'MIT',
-                value: 'mit'
-            }
-        ]
+        default: 'MIT'
         // Licensing info: https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository
     }
 ];
@@ -106,7 +84,7 @@ const writeToFile = util.promisify(fs.writeFile);
 
 // function to initialize program - 9-3 ex. 40
 let init = async () => {
-    console.log("initializing");
+    console.log("Welcome to the README.md Generator! You will be guided through a series of questions to create the best README ever! If you don't have an answer right now, you can leave it blank. At the end, you will have a README.md file for your project.");
     try {
         // Get user answers
         const answers = await promptUser();
