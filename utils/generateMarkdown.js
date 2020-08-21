@@ -1,7 +1,9 @@
+const badge = require('./licenseBadge');
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-[![License: ${data.license.toUpperCase()}](https://img.shields.io/badge/License-${data.license.toUpperCase()}-brightgreen.svg)]
+${badge[data.license]}
 
 ## Description
 ${data.description}  
@@ -28,11 +30,11 @@ ${data.tests}
 
 ## Questions
 Contact email: ${data.email}\n
-GitHub Profile: [${data.github}](https://github.com/${data.github})
+GitHub: [${data.github}](https://github.com/${data.github})\n
 ${data.addlquestions}
 
 ## License
-This project is licensed under the terms of the ${data.license.toUpperCase()} license.
+This project is licensed under the terms of the ${data.license} license.
 `;
 }
 
