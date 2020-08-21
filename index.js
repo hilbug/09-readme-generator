@@ -74,6 +74,7 @@ const questions = [
     }
 ];
 
+//Functions
 // Prompt User with questions
 let promptUser = () => {
     return inquirer.prompt(questions);
@@ -94,10 +95,10 @@ let init = async () => {
         const readme = generateMarkdown(answers);
 
         // Save readme to a file
-        await writeToFile("README_test.md", readme);
+        await writeToFile("README_demo.md", readme);
 
         // File successful
-        console.log("Successfully wrote to README_test.md");
+        console.log("Successfully created to README_demo.md");
 
     } catch (err) {
         console.log(err);
