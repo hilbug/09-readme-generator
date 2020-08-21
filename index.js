@@ -98,7 +98,7 @@ let init = async () => {
         await writeToFile("README_demo.md", readme);
 
         // File successful
-        console.log("Successfully created to README_demo.md");
+        console.log("Successfully created README_demo.md");
 
     } catch (err) {
         console.log(err);
