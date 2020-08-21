@@ -17,8 +17,9 @@ To start using this application, first ensure you have Node.js and npm installed
 
 ## Usage
 1. When the application starts, answer each prompt or leave blank.
-2. When all questions have been answered, a file named README_demo&#46;md will be generated within the local folder. 
-![Screen Shot 2020-08-20 at 11 12 35 PM](https://user-images.githubusercontent.com/65197724/90848441-e81c5280-e33a-11ea-8834-f4e750f3bf47.png)
+2. When all questions have been answered, a file named README_demo&#46;md will be generated within the local folder.
+
+![Screen Shot 2020-08-21 at 12 15 29 AM](https://user-images.githubusercontent.com/65197724/90851679-6ed52d80-e343-11ea-9f5c-3b834e125eb8.png)
 
 ### Video Demo
 View a video providing a walk-through of the application [here](https://drive.google.com/file/d/1MMK4GyxDCSeu2jjALhZ1f_CZ_spNe9qv/view).
